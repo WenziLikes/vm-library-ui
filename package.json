@@ -11,12 +11,12 @@
     "url": "https://github.com/WenziLike/vm-library-ui/issues"
   },
   "homepage": "https://github.com/WenziLike#readme",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "VM Lib UI",
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack && npm version patch && npm publish",
+    "start": "webpack && npm publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
