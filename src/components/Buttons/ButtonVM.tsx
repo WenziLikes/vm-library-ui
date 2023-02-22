@@ -1,15 +1,10 @@
 import React, {FC} from 'react';
-import "./ButtonVM.css"
 
 export interface ButtonVMProps {
     /**
      * Is this the principal call to action on the page?
      */
-    primary: string | boolean;
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
+    primary: boolean;
     /**
      * How large should the button be?
      */
@@ -18,6 +13,13 @@ export interface ButtonVMProps {
      * ButtonVM contents
      */
     label: string;
+
+    styleColorBtn:
+        "secondary" | "secondary-gray" |
+        "primary" | "primary-blue" |
+        "danger" | "danger-darkred" |
+        "success" | "success-green" |
+        "violet" | "violet-primary";
     /**
      * Optional click handler
      */
@@ -29,8 +31,7 @@ export interface ButtonVMProps {
  */
 const ButtonVM: FC<ButtonVMProps> = (buttonVMProps) => {
 
-    const {primary, size = 'medium', backgroundColor, label, ...props} = buttonVMProps
-
+    const {primary = false, size = 'medium', styleColorBtn, label, ...props} = buttonVMProps
 
     /** Info Classes
      *  --secondary
@@ -47,32 +48,12 @@ const ButtonVM: FC<ButtonVMProps> = (buttonVMProps) => {
      *
      *  --violet
      *  --violet-primary
-     *
      * */
-    const colors = [
-        "secondary-gray",
-        "primary",
-        "primary-blue",
-        "danger",
-        "danger-darkred",
-        "success",
-        "success-green",
-        "violet",
-        "violet-primary",
-    ];
-
-    const colorsFilter = colors.filter((color) => {
-        if (color === primary) {
-            return primary
-        }
-    })
-    console.log(colorsFilter)
-    const mode = primary ? `--vm-btn--${colorsFilter}` : '--vm-btn--secondary';
+    const mode = primary ? `--vm-btn--${styleColorBtn}` : '--vm-btn--secondary';
     return (
         <button
             type="button"
             className={['--vm-btn', `--vm-btn--${size}`, mode].join(' ')}
-            style={{backgroundColor}}
             {...props}
         >
             {label}
