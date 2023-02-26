@@ -30,7 +30,7 @@
   "author": "Viacheslav Murakhin",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.0",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -40,7 +40,7 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.28",
-    "babel-loader": "^8.3.0",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "mini-css-extract-plugin": "^2.7.2",
     "react": "^18.2.0",
