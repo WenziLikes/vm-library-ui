@@ -51,37 +51,37 @@ section {
 /* ========================================= UTILITY CLASSES */
 
 /* ================================= Flex */
-.--flex-center {
+.--flex-vm--center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.--flex-start {
+.--flex-vm--start {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.--flex-end {
+.--flex-vm--end {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.--flex-between {
+.--flex-vm--between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.--flex-around {
+.--flex-vm--around {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.--flex-evenly {
+.--flex-vm--evenly {
   display: flex;
   justify-content: space-evenly;
   align-items: center;

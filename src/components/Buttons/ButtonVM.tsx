@@ -6,6 +6,10 @@ export interface ButtonVMProps {
      */
     primary: boolean;
     /**
+     * What background color to use
+     */
+    backgroundColor?: string;
+    /**
      * How large should the button be?
      */
     size?: 'small' | 'medium' | 'large';
@@ -31,7 +35,8 @@ export interface ButtonVMProps {
  */
 const ButtonVM: FC<ButtonVMProps> = (buttonVMProps) => {
 
-    const {primary = false, size = 'medium', styleColorBtn, label, ...props} = buttonVMProps
+    const {primary = false, size = 'medium',
+        styleColorBtn,backgroundColor ,label, ...props} = buttonVMProps
 
     /** Info Classes
      *  --secondary
@@ -54,6 +59,7 @@ const ButtonVM: FC<ButtonVMProps> = (buttonVMProps) => {
         <button
             type="button"
             className={['--vm-btn', `--vm-btn--${size}`, mode].join(' ')}
+            style={{backgroundColor}}
             {...props}
         >
             {label}
