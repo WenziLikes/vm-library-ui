@@ -6,3 +6,5 @@ node_modules
 src/.DS_Store
 src/components/.DS_Store
 storybook-static
+*css
+*css.map
